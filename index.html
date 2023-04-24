@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>To do list</title>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+
+  </div>
+  <header>
+    <h1>TO DO LIST</h1>
+  </header>
+  <main>
+    <section class="main-section">
+      <div class="container main-section__content todo">
+        <div class="todo__input">
+          <br>
+          <br>
+          <button class="popup_href open-popup" onclick="return open_popup()">Новое задание</button>
+          <div class="popup_window" id="popup_window_id">
+            <div class="popup">
+              <button class="material-symbols-sharp icon close-popup" onclick="return close_popup()">
+                close
+              </button>
+              <input class="todo__input-text" type="text" id="input-task">
+              <input class="todo__input-text" type="date" id="input-date">
+              <button class="todo__add" type="submit" id="btn-submit" onclick="return addNewTask()">Добавить
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div class="todo__list-block">
+          <ul class="todo__items" id="myList">
+            <!-- <li class="todo__task">
+                    <span class="todo__task-date"></span>
+                    <span class="todo__task-text"></span>
+                    <button class="material-symbols-sharp icon">
+                      done
+                      </button>
+                  </li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+   <script src="js/preloader.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

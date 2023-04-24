@@ -1,0 +1,157 @@
+html
+  font-family: sans-serif
+
+header
+  width: 100%
+  margin: 0 auto
+  h1
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    font-family: sans-serif
+main
+  width: 100%
+  margin: 0 auto
+//default preloader 
+.preloader
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: white
+  z-index: 9999
+  &__row
+    position: relative
+    top: 50%
+    left: 50%
+    width: 70px
+    height: 70px
+    margin-top: -35px
+    margin-left: -35px
+    text-align: center
+    animation: preloader-rotate 2s infinite linear
+  &__item
+    position: absolute
+    display: inline-block
+    top: 0
+    background-color: #337ab7
+    border-radius: 100%
+    width: 35px
+    height: 35px
+    animation: preloader-bounce 2s infinite ease-in-out
+    &:last-child
+      top: auto
+      bottom: 0
+      animation-delay: -1s
+
+.active
+  .preloader
+    transition: 1s opacity
+    opacity: 0
+.hidden
+  .preloader
+      display: none
+
+// Правило @keyframes устанавливает ключевые кадры при анимации элемента. 
+@keyframes preloader-rotate
+  100%
+    transform: rotate(360deg)
+@keyframes preloader-bounce
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(0)
+  50%
+    transform: scale(1)
+
+.container
+  width: 1140px
+  margin: 0 auto
+
+.main-section
+  &__content
+    width: 50%
+    // min-height: 100%
+
+    background: #e0dada1c
+    border-radius: 50px
+    border: 2px solid black
+    overflow: auto //временно
+
+.todo
+  &__input
+    margin-bottom: 50px
+    display: flex
+    h2
+      font-size: 1.8rem
+      margin-bottom: 10px
+      font-weight: 700
+      font-family: sans-serif
+
+  &__input-text
+    width: 65%
+    height: 2rem
+    font-size: 1.5rem
+    font-weight: 700
+    margin-right: 30px
+  &__add
+    width: 25%
+    height: 4rem
+    font-size: 1.5rem
+    font-weight: 700
+    margin-right: 30px
+  &__list-block
+    height: 400px
+    width: 80%
+    margin: 0 auto
+  &__task
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    background: #ec8f8f4b
+    padding: 15px
+    border-radius: 15px
+    font-family: sans-serif
+    align-items: center
+    margin-bottom: 2rem
+  &__items
+    font-size: 1.2rem
+    font-weight: 700
+
+.icon
+  font-size: 28px !important
+  // background: #ffffff
+
+.done
+  background: green
+
+.popup_href
+  font-size: 2rem
+  color: black
+  // padding-top: 2rem
+  text-align: center
+  margin: 10px auto
+
+.popup_window
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(0,0 ,0 ,0.8 )
+  display: none
+.popup
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 600px
+  background: #fff
+  padding: 20px
+  transform: translate(-50%,-50%)
+  padding-top: 60px
+
+  .close-popup
+    position: absolute
+    top: 10px
+    right: 30px
